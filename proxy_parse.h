@@ -63,7 +63,7 @@
  
  /* Parse the request buffer in buf given that buf is of length buflen */
  int ParsedRequest_parse(struct ParsedRequest * parse, const char *buf,
-             int buflen);
+          int buflen);
  
  /* Destroy the parsing object. */
  void ParsedRequest_destroy(struct ParsedRequest *pr);
@@ -75,7 +75,7 @@
     unparse().
   */
  int ParsedRequest_unparse(struct ParsedRequest *pr, char *buf, 
-               size_t buflen);
+            size_t buflen);
  
  /* 
     Retrieve the entire buffer with the exception of request line from a parsed
@@ -85,7 +85,7 @@
     unparsed.
   */
  int ParsedRequest_unparse_headers(struct ParsedRequest *pr, char *buf, 
-                   size_t buflen);
+               size_t buflen);
  
  /* Total length including request line, headers and the trailing \r\n*/
  size_t ParsedRequest_totalLen(struct ParsedRequest *pr);
@@ -97,9 +97,9 @@
  
  /* Set, get, and remove null-terminated header keys and values */
  int ParsedHeader_set(struct ParsedRequest *pr, const char * key, 
-               const char * value);
+             const char * value);
  struct ParsedHeader* ParsedHeader_get(struct ParsedRequest *pr, 
-                       const char * key);
+                   const char * key);
  int ParsedHeader_remove (struct ParsedRequest *pr, const char * key);
  
  /* debug() prints out debugging info if DEBUG is set to 1 */
